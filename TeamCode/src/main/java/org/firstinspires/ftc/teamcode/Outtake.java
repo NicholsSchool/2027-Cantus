@@ -1,16 +1,25 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class Outtake {
-    DcMotorEx outtaker;
+    DcMotorEx Outtaker;
+    CRServo FlyWheel;
 
     public Outtake(HardwareMap hwMap){
-        outtaker = hwMap.get(DcMotorEx.class, "outtaker");
+        Outtaker = hwMap.get(DcMotorEx.class, "Outtaker");
+        FlyWheel = hwMap.get(CRServo.class, "FlyWheel");
 
     }
     public void outtaking(){
-        outtaker.setPower(1);
+        Outtaker.setPower(1);
+        FlyWheel.setPower(1);
     }
+    public void not_outtaking(){
+        Outtaker.setPower(0);
+        FlyWheel.setPower(0);
+    }
+
 }

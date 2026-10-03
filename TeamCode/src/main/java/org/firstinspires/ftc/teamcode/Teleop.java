@@ -25,9 +25,13 @@ public class Teleop extends OpMode{
 
         if(gamepad1.a){
             intake.intaking();
+        }else{
+            intake.not_intaking();
         }
         if(gamepad1.b){
             outtake.outtaking();
+        }else{
+            outtake.not_outtaking();
         }
     }
 }
