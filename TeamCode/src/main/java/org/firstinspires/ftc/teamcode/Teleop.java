@@ -23,15 +23,20 @@ public class Teleop extends OpMode{
     public void loop() {
         drivetrain.drive(gamepad1.left_stick_y, gamepad1.right_stick_y);
 
-        if(gamepad1.a){
+        if(gamepad1.right_trigger_pressed){
             intake.intaking();
         }else{
             intake.not_intaking();
         }
-        if(gamepad1.b){
+        if(gamepad1.x){
             outtake.outtaking();
         }else{
             outtake.not_outtaking();
+        }
+        if(gamepad1.y){
+            outtake.flywheel();
+        }else{
+            outtake.flywheel_off();
         }
     }
 }

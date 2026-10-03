@@ -15,11 +15,20 @@ public class Outtake {
     }
     public void outtaking(){
         Outtaker.setPower(1);
-        FlyWheel.setPower(1);
+
     }
     public void not_outtaking(){
         Outtaker.setPower(0);
-        FlyWheel.setPower(0);
+
     }
+    public void flywheel(){
+        FlyWheel.setPower(1);
+
+    }
+    public void flywheel_off(){
+        FlyWheel.setPower(0);
+
+    }
+
 
 }
