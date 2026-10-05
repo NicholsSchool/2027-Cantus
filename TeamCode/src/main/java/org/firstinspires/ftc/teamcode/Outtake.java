@@ -5,20 +5,20 @@ import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class Outtake {
-    DcMotorEx Outtaker;
+    DcMotorEx Outaker;
     CRServo FlyWheel;
 
     public Outtake(HardwareMap hwMap){
-        Outtaker = hwMap.get(DcMotorEx.class, "Outtaker");
+        Outaker = hwMap.get(DcMotorEx.class, "Outaker");
         FlyWheel = hwMap.get(CRServo.class, "FlyWheel");
 
     }
-    public void outtaking(){
-        Outtaker.setPower(1);
+    public void outaking(){
+        Outaker.setPower(1);
 
     }
-    public void not_outtaking(){
-        Outtaker.setPower(0);
+    public void not_outaking(){
+        Outaker.setPower(0);
 
     }
     public void flywheel(){

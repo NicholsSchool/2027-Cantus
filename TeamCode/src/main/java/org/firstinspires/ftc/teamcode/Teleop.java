@@ -1,9 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotorEx;
-import com.qualcomm.robotcore.hardware.Gamepad;
-import com.qualcomm.robotcore.hardware.HardwareMap;
 
 @TeleOp (name = "Tank Drive")
 public class Teleop extends OpMode{
@@ -29,9 +26,9 @@ public class Teleop extends OpMode{
             intake.not_intaking();
         }
         if(gamepad1.x){
-            outtake.outtaking();
+            outtake.outaking();
         }else{
-            outtake.not_outtaking();
+            outtake.not_outaking();
         }
         if(gamepad1.y){
             outtake.flywheel();

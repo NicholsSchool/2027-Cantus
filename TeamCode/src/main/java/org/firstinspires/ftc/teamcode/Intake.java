@@ -1,31 +1,30 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.hardware.gobilda.GoBildaPinpointDriver;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 public class Intake {
 
- CRServo intakeleft;
- CRServo intakeright;
+ CRServo intake_left;
+ CRServo intake_right;
  CRServo FlyWheel;
  DcMotorEx Intaker;
  public Intake(HardwareMap hwMap){
-     intakeright = hwMap.get(CRServo.class, "intakeright");
-     intakeleft = hwMap.get(CRServo.class, "intakeleft");
+     intake_right = hwMap.get(CRServo.class, "intake_right");
+     intake_left = hwMap.get(CRServo.class, "intake_left");
      Intaker = hwMap.get(DcMotorEx.class, "Intaker");
      FlyWheel = hwMap.get(CRServo.class, "FlyWheel");
  }
  public void intaking(){
-     intakeright.setPower(1);
-     intakeleft.setPower(1);
+     intake_right.setPower(1);
+     intake_left.setPower(1);
      Intaker.setPower(1);
      FlyWheel.setPower(1);
  }
     public void not_intaking(){
-        intakeright.setPower(0);
-        intakeleft.setPower(0);
+        intake_right.setPower(0);
+        intake_left.setPower(0);
         Intaker.setPower(0);
         FlyWheel.setPower(0);
     }
