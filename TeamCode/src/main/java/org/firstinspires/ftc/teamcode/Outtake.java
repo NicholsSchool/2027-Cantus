@@ -9,8 +9,8 @@ public class Outtake {
     CRServo FlyWheel;
 
     public Outtake(HardwareMap hwMap){
-        Outaker = hwMap.get(DcMotorEx.class, "Outaker");
-        FlyWheel = hwMap.get(CRServo.class, "FlyWheel");
+        Outaker = hwMap.get(DcMotorEx.class, "Outake");
+        FlyWheel = hwMap.get(CRServo.class, "Aggetator");
 
     }
     public void outaking(){

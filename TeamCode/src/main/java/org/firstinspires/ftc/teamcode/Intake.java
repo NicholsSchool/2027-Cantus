@@ -11,10 +11,10 @@ public class Intake {
  CRServo FlyWheel;
  DcMotorEx Intaker;
  public Intake(HardwareMap hwMap){
-     intake_right = hwMap.get(CRServo.class, "intake_right");
-     intake_left = hwMap.get(CRServo.class, "intake_left");
-     Intaker = hwMap.get(DcMotorEx.class, "Intaker");
-     FlyWheel = hwMap.get(CRServo.class, "FlyWheel");
+     intake_right = hwMap.get(CRServo.class, "R Paddle");
+     intake_left = hwMap.get(CRServo.class, "L Paddle");
+     Intaker = hwMap.get(DcMotorEx.class, "Intake");
+     FlyWheel = hwMap.get(CRServo.class, "Aggetator");
  }
  public void intaking(){
      intake_right.setPower(1);

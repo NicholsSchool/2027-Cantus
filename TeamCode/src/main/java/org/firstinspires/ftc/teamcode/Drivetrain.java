@@ -10,9 +10,9 @@ public class Drivetrain {
     DcMotorEx left;
 
     public Drivetrain(HardwareMap hwMap){
-        right = hwMap.get(DcMotorEx.class, "right");
+        right = hwMap.get(DcMotorEx.class, "Right Drive");
         //left = hwMap.get(DcMotorEx.class, "left");
-        left = hwMap.get(DcMotorEx.class,"left");
+        left = hwMap.get(DcMotorEx.class,"Left Drive");
     }
 
     public void drive(double left_power,double right_power ){

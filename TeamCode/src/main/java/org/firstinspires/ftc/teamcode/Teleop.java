@@ -18,6 +18,8 @@ public class Teleop extends OpMode{
 
     @Override
     public void loop() {
+        boolean outake_on = false;
+
         drivetrain.drive(gamepad1.left_stick_y, gamepad1.right_stick_y);
 
         if(gamepad1.right_trigger_pressed){
@@ -30,7 +32,10 @@ public class Teleop extends OpMode{
         }else{
             outtake.not_outaking();
         }
-        if(gamepad1.y){
+        if (gamepad1.y){
+            outake_on = true;
+        }
+        if(outake_on){
             outtake.flywheel();
         }else{
             outtake.flywheel_off();
