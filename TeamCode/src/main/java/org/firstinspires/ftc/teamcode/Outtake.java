@@ -14,7 +14,7 @@ public class Outtake {
 
     }
     public void outaking(){
-        Outaker.setPower(1);
+        Outaker.setPower(0.75);
 
     }
     public void not_outaking(){
